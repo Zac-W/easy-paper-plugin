@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "arXiv CN PDF Split Viewer",
+  "description": "在 arXiv 论文页面并排查看原文 PDF 与 GitHub 中的中文翻译 PDF。",
+  "version": "0.1.0",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://arxiv.org/abs/*"
+      ],
+      "js": [
+        "src/config.js",
+        "src/content.js"
+      ],
+      "css": [
+        "src/styles.css"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}
